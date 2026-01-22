@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Marketing Agency for Growing DTC Brands | Ascent Mgnt</title>
+    <title>Ascent Mgnt | Done-For-You Brand Creation & Content</title>
     <style>
         * {
             margin: 0;
@@ -38,7 +38,6 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
-
             *,
             *::before,
             *::after {
@@ -224,7 +223,7 @@
             position: relative;
         }
 
-        /* Hero with Bubble Background */
+        /* Hero */
         .hero {
             padding: 8rem 0;
             position: relative;
@@ -300,71 +299,6 @@
             font-style: italic;
         }
 
-        /* Social Proof */
-        .social-proof {
-            background: var(--surface);
-            padding: var(--spacing-2xl) 0;
-            border-top: 1px solid var(--line);
-            border-bottom: 1px solid var(--line);
-        }
-
-        .social-proof-content {
-            text-align: center;
-        }
-
-        .trust-line {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--muted);
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .logo-pills {
-            display: flex;
-            justify-content: center;
-            gap: var(--spacing-md);
-            flex-wrap: wrap;
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .pill {
-            background: var(--bg-1);
-            padding: var(--spacing-sm) var(--spacing-lg);
-            border-radius: var(--radius-full);
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--muted);
-            border: 1px solid var(--line);
-        }
-
-        .capabilities-line {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--muted);
-            margin: var(--spacing-xl) 0 var(--spacing-md);
-        }
-
-        .capability-tags {
-            display: flex;
-            justify-content: center;
-            gap: var(--spacing-sm);
-            flex-wrap: wrap;
-        }
-
-        .capability-tag {
-            background: transparent;
-            padding: var(--spacing-xs) var(--spacing-md);
-            border-radius: var(--radius-full);
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--accent);
-            border: 1px solid var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
         /* Portfolio Section */
         .portfolio {
             padding: var(--spacing-4xl) 0;
@@ -434,11 +368,6 @@
             opacity: 1;
         }
 
-        .portfolio-item:focus-within {
-            outline: 2px solid var(--accent);
-            outline-offset: 2px;
-        }
-
         .portfolio-content {
             position: relative;
             z-index: 1;
@@ -488,209 +417,82 @@
             font-size: 0.95rem;
         }
 
-        .portfolio-item a {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 2;
-            text-indent: -9999px;
-        }
-
-        .portfolio-item a:focus-visible {
-            outline: none;
-        }
-
-        /* Services */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--spacing-xl);
-        }
-
-        .service-card {
-            padding: var(--spacing-2xl);
-            border: 1px solid var(--line);
-            border-radius: var(--radius-md);
-            background: linear-gradient(135deg, var(--surface) 0%, rgba(23, 26, 31, 0.5) 100%);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .service-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(233, 208, 144, 0.15);
-        }
-
-        .service-card:hover::before {
-            opacity: 1;
-        }
-
-        .service-card h3 {
-            font-size: 1.375rem;
-            margin-bottom: var(--spacing-md);
-            font-weight: 600;
-            color: var(--text);
-            letter-spacing: -0.01em;
-        }
-
-        .service-card p {
-            color: var(--muted);
-            line-height: 1.7;
-        }
-
-        /* Case Study */
-        .case-study {
+        /* Babysitter Section */
+        .babysitter {
             background: var(--bg-1);
             border-top: 1px solid var(--line);
             border-bottom: 1px solid var(--line);
             padding: var(--spacing-4xl) 0;
         }
 
-        .case-study-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-3xl);
+        .babysitter-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .case-study h2 {
-            font-size: clamp(1.75rem, 3vw, 2.5rem);
+        .babysitter h2 {
+            font-size: clamp(2rem, 4vw, 3.25rem);
             margin-bottom: var(--spacing-lg);
-            line-height: 1.15;
+            line-height: 1.1;
             letter-spacing: -0.02em;
         }
 
-        .case-label {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent);
-            margin-bottom: var(--spacing-sm);
-            font-weight: 600;
-        }
-
-        .case-block {
-            margin-bottom: var(--spacing-2xl);
-        }
-
-        .case-block h3 {
+        .babysitter-subtitle {
             font-size: 1.25rem;
-            margin-bottom: var(--spacing-md);
-            color: var(--text);
-            font-weight: 600;
-        }
-
-        .case-block p,
-        .case-block ul {
             color: var(--muted);
-            line-height: 1.7;
+            margin-bottom: var(--spacing-2xl);
+            line-height: 1.6;
         }
 
-        .case-block ul {
-            list-style: none;
-            padding-left: var(--spacing-md);
-        }
-
-        .case-block li {
-            padding: var(--spacing-sm) 0;
-            position: relative;
-            padding-left: var(--spacing-md);
-        }
-
-        .case-block li::before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-        }
-
-        .deliverables-list {
-            display: flex;
-            gap: var(--spacing-md);
-            flex-wrap: wrap;
-            margin-top: var(--spacing-lg);
-        }
-
-        .deliverable-chip {
-            background: var(--surface);
-            border: 1px solid var(--line);
-            padding: var(--spacing-sm) var(--spacing-md);
-            border-radius: var(--radius-full);
-            font-size: 0.875rem;
-            color: var(--muted);
-        }
-
-        /* Process */
-        .process-grid {
+        .takeaway-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: var(--spacing-lg);
+            margin-top: var(--spacing-2xl);
         }
 
-        .process-card {
-            text-align: left;
-            padding: var(--spacing-xl);
+        .takeaway-card {
             background: var(--surface);
             border: 1px solid var(--line);
             border-radius: var(--radius-md);
+            padding: var(--spacing-xl);
+            text-align: left;
             transition: all 0.3s;
         }
 
-        .process-card:hover {
+        .takeaway-card:hover {
             border-color: var(--accent);
             transform: translateY(-2px);
         }
 
-        .process-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
-            color: var(--bg-0);
-            border-radius: 50%;
-            font-weight: 700;
-            margin-bottom: var(--spacing-md);
-            font-size: 1rem;
-        }
-
-        .process-card h3 {
+        .takeaway-card h3 {
             font-size: 1.125rem;
             margin-bottom: var(--spacing-sm);
-            font-weight: 600;
             color: var(--text);
+            font-weight: 600;
         }
 
-        .process-card p {
+        .takeaway-card p {
             color: var(--muted);
             font-size: 0.95rem;
             line-height: 1.6;
         }
 
-        /* Offers */
-        .offers-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--spacing-lg);
+        /* Packages */
+        .packages-section {
+            padding: var(--spacing-4xl) 0;
         }
 
-        .offer-card {
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-xl);
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .package-card {
             border: 1px solid var(--line);
             border-radius: var(--radius-lg);
             padding: var(--spacing-2xl);
@@ -701,13 +503,13 @@
             position: relative;
         }
 
-        .offer-card.featured {
+        .package-card.featured {
             border-color: var(--accent);
             box-shadow: 0 8px 32px rgba(233, 208, 144, 0.2);
         }
 
-        .offer-card.featured::before {
-            content: 'MOST REQUESTED';
+        .package-card.featured::before {
+            content: 'FLAGSHIP';
             position: absolute;
             top: -12px;
             left: 50%;
@@ -721,45 +523,39 @@
             letter-spacing: 0.05em;
         }
 
-        .offer-card:hover {
+        .package-card:hover {
             border-color: var(--accent);
             transform: translateY(-4px);
             box-shadow: 0 12px 32px rgba(233, 208, 144, 0.12);
         }
 
-        .offer-card h3 {
-            font-size: 1.625rem;
+        .package-card h3 {
+            font-size: 1.75rem;
             margin-bottom: var(--spacing-sm);
             font-weight: 600;
             color: var(--text);
         }
 
-        .offer-subtitle {
+        .package-subtitle {
             color: var(--muted);
-            margin-bottom: var(--spacing-lg);
-            font-size: 0.95rem;
+            margin-bottom: var(--spacing-md);
+            font-size: 1rem;
         }
 
-        .offer-meta {
+        .package-for {
             font-size: 0.875rem;
             color: var(--accent);
-            margin-bottom: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
             font-weight: 500;
         }
 
-        .offer-timeline {
-            font-size: 0.875rem;
-            color: var(--muted);
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .offer-includes {
+        .package-includes {
             list-style: none;
             margin-bottom: var(--spacing-xl);
             flex-grow: 1;
         }
 
-        .offer-includes li {
+        .package-includes li {
             padding: var(--spacing-sm) 0;
             padding-left: var(--spacing-lg);
             position: relative;
@@ -767,11 +563,133 @@
             color: var(--muted);
         }
 
-        .offer-includes li::before {
+        .package-includes li::before {
             content: "—";
             position: absolute;
             left: 0;
             color: var(--accent);
+        }
+
+        .package-outcome {
+            background: var(--bg-1);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-sm);
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .package-outcome strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* TikTok Differentiator */
+        .tiktok-section {
+            background: var(--surface);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            padding: var(--spacing-4xl) 0;
+        }
+
+        .tiktok-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .tiktok-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .tiktok-content p {
+            font-size: 1.125rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .tiktok-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .tiktok-feature {
+            background: var(--bg-1);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-xl);
+            transition: all 0.3s;
+        }
+
+        .tiktok-feature:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .tiktok-feature h3 {
+            font-size: 1.125rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .tiktok-feature p {
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: var(--spacing-4xl) 0;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-xl);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step-card {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+            color: var(--bg-0);
+            border-radius: 50%;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            font-size: 1.5rem;
+        }
+
+        .step-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .step-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         /* Testimonials */
@@ -831,7 +749,6 @@
             margin-bottom: var(--spacing-md);
             padding: var(--spacing-lg);
             transition: border-color 0.3s;
-            overflow: hidden;
         }
 
         details:hover {
@@ -871,12 +788,6 @@
             transform: rotate(45deg);
         }
 
-        @media (prefers-reduced-motion: reduce) {
-            summary::after {
-                transition: none;
-            }
-        }
-
         summary:focus-visible {
             outline: 2px solid var(--accent);
             outline-offset: 4px;
@@ -887,6 +798,355 @@
             margin-top: var(--spacing-md);
             color: var(--muted);
             line-height: 1.7;
+        }
+
+        /* Contact Form */
+        .contact-form-section {
+            padding: var(--spacing-4xl) 0;
+        }
+
+        .form-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-2xl);
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: var(--spacing-xs);
+            font-weight: 500;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 1px solid var(--line);
+            background: var(--bg-1);
+            color: var(--text);
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--muted);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(233, 208, 144, 0.1);
+        }
+
+        .calendly-placeholder {
+            background: var(--bg-1);
+            border: 2px dashed var(--line);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-3xl);
+            text-align: center;
+            margin-top: var(--spacing-2xl);
+        }
+
+        .calendly-placeholder p {
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        /* About Page */
+        .about-section {
+            padding: var(--spacing-4xl) 0;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto var(--spacing-3xl);
+        }
+
+        .about-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
+
+        .about-content p {
+            font-size: 1.125rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .team-member {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-xl);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .team-member:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .team-member h3 {
+            font-size: 1.125rem;
+            margin-bottom: var(--spacing-xs);
+            color: var(--text);
+        }
+
+        .team-member p {
+            font-size: 0.875rem;
+            color: var(--muted);
+        }
+
+        .podcast-section {
+            background: var(--bg-1);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-2xl);
+            text-align: center;
+        }
+
+        .podcast-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--text);
+        }
+
+        .podcast-links {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .podcast-links a {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-full);
+            color: var(--muted);
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .podcast-links a:hover {
+            border-color: var(--accent);
+            color: var(--text);
+        }
+
+        /* Privacy Page */
+        .privacy-section {
+            padding: var(--spacing-4xl) 0;
+        }
+
+        .privacy-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .privacy-content h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-2xl);
+            color: var(--text);
+        }
+
+        .privacy-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .privacy-content p {
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: var(--spacing-md);
+        }
+
+        /* Product Page */
+        .product-section {
+            padding: var(--spacing-4xl) 0;
+        }
+
+        .product-hero {
+            max-width: 900px;
+            margin: 0 auto var(--spacing-3xl);
+            text-align: center;
+        }
+
+        .product-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .product-hero .subtitle {
+            font-size: 1.25rem;
+            color: var(--muted);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-3xl);
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .product-block {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-2xl);
+        }
+
+        .product-block h2 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--text);
+        }
+
+        .product-block p {
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .product-block ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .product-block li {
+            padding: var(--spacing-sm) 0;
+            padding-left: var(--spacing-lg);
+            position: relative;
+            color: var(--muted);
+        }
+
+        .product-block li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        .product-cta {
+            text-align: center;
+            background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-2xl);
+        }
+
+        .product-cta h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .product-cta p {
+            color: var(--muted);
+            margin-bottom: var(--spacing-lg);
+            font-size: 1rem;
+        }
+
+        .product-note {
+            font-size: 0.875rem;
+            color: var(--accent);
+            margin-top: var(--spacing-md);
+        }
+
+        /* Packages Detail Page */
+        .packages-detail-section {
+            padding: var(--spacing-4xl) 0;
+        }
+
+        .package-detail {
+            max-width: 900px;
+            margin: 0 auto var(--spacing-3xl);
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-2xl);
+        }
+
+        .package-detail h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--text);
+        }
+
+        .package-detail h3 {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-sm);
+            margin-top: var(--spacing-xl);
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .package-detail p {
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .package-detail ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .package-detail li {
+            padding: var(--spacing-sm) 0;
+            padding-left: var(--spacing-lg);
+            position: relative;
+            color: var(--muted);
+        }
+
+        .package-detail li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        .timeline-info {
+            background: var(--bg-1);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-sm);
+            padding: var(--spacing-md);
+            margin: var(--spacing-lg) 0;
+            font-size: 0.95rem;
+            color: var(--muted);
         }
 
         /* Final CTA */
@@ -919,16 +1179,10 @@
         .final-cta p {
             font-size: 1.125rem;
             color: var(--muted);
-            margin-bottom: var(--spacing-sm);
+            margin-bottom: var(--spacing-xl);
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        .capacity-note {
-            font-size: 0.875rem;
-            color: var(--accent);
-            margin-bottom: var(--spacing-xl);
         }
 
         /* Footer */
@@ -992,39 +1246,6 @@
             border-radius: 4px;
         }
 
-        .footer-form {
-            margin-top: var(--spacing-md);
-        }
-
-        .footer-form h4 {
-            color: var(--text);
-            margin-top: var(--spacing-lg);
-            margin-bottom: var(--spacing-sm);
-            font-size: 1rem;
-        }
-
-        .footer-form input {
-            width: 100%;
-            padding: var(--spacing-sm) var(--spacing-md);
-            border: 1px solid var(--line);
-            background: var(--surface);
-            color: var(--text);
-            border-radius: var(--spacing-sm);
-            margin-bottom: var(--spacing-sm);
-            font-size: 0.95rem;
-            transition: all 0.2s;
-        }
-
-        .footer-form input::placeholder {
-            color: var(--muted);
-        }
-
-        .footer-form input:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(233, 208, 144, 0.1);
-        }
-
         .footer-bottom {
             border-top: 1px solid var(--line);
             padding-top: var(--spacing-lg);
@@ -1032,7 +1253,7 @@
             font-size: 0.875rem;
         }
 
-        /* Reveal Animation Classes */
+        /* Reveal Animation */
         .reveal-item {
             opacity: 0;
             transform: translateY(10px);
@@ -1059,19 +1280,21 @@
             }
 
             .portfolio-grid,
-            .case-study-grid,
-            .services-grid {
+            .packages-grid,
+            .product-grid {
                 grid-template-columns: 1fr;
                 gap: var(--spacing-xl);
             }
 
-            .offers-grid,
-            .testimonials-grid {
+            .takeaway-grid,
+            .tiktok-features,
+            .testimonials-grid,
+            .team-grid {
                 grid-template-columns: 1fr;
             }
 
-            .process-grid {
-                grid-template-columns: 1fr 1fr;
+            .steps-grid {
+                grid-template-columns: 1fr;
             }
 
             .footer-grid {
@@ -1092,10 +1315,6 @@
 
             nav ul {
                 display: none;
-            }
-
-            .process-grid {
-                grid-template-columns: 1fr;
             }
 
             .cta-group {
@@ -1119,297 +1338,240 @@
 
     <header>
         <div class="header-inner">
-            <a href="/" class="logo">Ascent Mgnt</a>
+            <a href="#home" class="logo">Ascent Mgnt</a>
             <nav>
                 <ul>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#work">Work</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#process">Process</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#contact" class="btn">Book a Growth Call</a></li>
+                    <li><a href="#contact" class="btn">Book a Call</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main id="main">
-        <!-- Hero with Interactive Bubble Background -->
-        <section class="hero">
+        <!-- HOME PAGE -->
+        <section class="hero" id="home">
             <canvas class="bubble-canvas" id="bubbleCanvas"></canvas>
             <div class="container">
                 <div class="hero-content">
-                    <h1>Digital Marketing Agency for Growing DTC Brands</h1>
-                    <p class="hero-subtitle">We connect acquisition with conversion. Paid ads, social content systems, CRO-focused Shopify builds, and performance optimization — all aligned to scale revenue, not vanity metrics.</p>
+                    <h1>Brand Creation & Growth Package</h1>
+                    <p class="hero-subtitle">Done-for-you brand building from idea to execution. We create the brand, build the content, run your social, and set up commerce that sells.</p>
                     <ul class="proof-points">
-                        <li>Content + paid acquisition aligned with conversion</li>
-                        <li>Creative systems for consistent growth</li>
-                        <li>Performance-first execution (CRO, AOV, CVR)</li>
+                        <li>We handle execution end-to-end</li>
+                        <li>Content-first brand building</li>
+                        <li>Social commerce ready (TikTok Shop + live shopping)</li>
                     </ul>
                     <div class="cta-group">
-                        <a href="#contact" class="btn">Book a Growth Call</a>
-                        <a href="#contact" class="btn btn-secondary">Request Free Growth Audit</a>
+                        <a href="#contact" class="btn">Book a Call</a>
+                        <a href="#work" class="btn btn-secondary">View Work</a>
                     </div>
-                    <p class="cta-note">Limited client slots per month to protect quality</p>
+                    <p class="cta-note">Limited spots monthly — we protect quality</p>
                 </div>
             </div>
         </section>
 
-        <!-- Social Proof -->
-        <section class="social-proof">
-            <div class="container">
-                <div class="social-proof-content">
-                    <p class="trust-line">Selected Clients</p>
-                    <div class="logo-pills">
-                        <span class="pill">Premium Beauty Co</span>
-                        <span class="pill">Modern Apparel</span>
-                        <span class="pill">HomeGoods Direct</span>
-                        <span class="pill">Wellness Brand</span>
-                        <span class="pill">Tech Accessories</span>
-                        <span class="pill">Sustainable Living</span>
-                    </div>
-                    <p class="capabilities-line">Core Capabilities</p>
-                    <div class="capability-tags">
-                        <span class="capability-tag">Paid Ads</span>
-                        <span class="capability-tag">Social Media</span>
-                        <span class="capability-tag">Shopify CRO</span>
-                        <span class="capability-tag">Performance Marketing</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio -->
+        <!-- Portfolio / Selected Work -->
         <section class="portfolio" id="work">
             <div class="container">
                 <div class="section-header reveal-item">
                     <h2>Selected Work</h2>
-                    <p>Integrated campaigns that connect creative, acquisition, and conversion to drive measurable growth.</p>
+                    <p>Brand systems and content execution designed to support growth and clarity.</p>
                 </div>
                 <div class="portfolio-grid">
-                    <div class="portfolio-item reveal-item" tabindex="0">
+                    <div class="portfolio-item reveal-item">
                         <div class="portfolio-content">
                             <div class="portfolio-tags">
-                                <span class="portfolio-tag">Paid Ads</span>
-                                <span class="portfolio-tag">CRO</span>
+                                <span class="portfolio-tag">Brand</span>
+                                <span class="portfolio-tag">Content</span>
+                                <span class="portfolio-tag">Shopify</span>
                             </div>
-                            <h3>Clean Skincare Co</h3>
-                            <p>Complete growth system: creative testing on Meta, landing page rebuild, and checkout optimization. CAC dropped 32% while scaling spend.</p>
+                            <h3>Skincare DTC Brand</h3>
+                            <p>Complete brand creation, packaging system, Shopify build, and content strategy. From zero to launch with consistent posting and product content systems.</p>
                         </div>
-                        <a href="#work" aria-label="View Clean Skincare Co project">View project</a>
                     </div>
-                    <div class="portfolio-item reveal-item" tabindex="0">
+                    <div class="portfolio-item reveal-item">
                         <div class="portfolio-content">
                             <div class="portfolio-tags">
+                                <span class="portfolio-tag">Brand</span>
                                 <span class="portfolio-tag">Social</span>
+                                <span class="portfolio-tag">TikTok Shop</span>
+                            </div>
+                            <h3>Wellness Product Launch</h3>
+                            <p>Brand identity, TikTok Shop setup, live shopping content, and daily social execution. Built to sell through content from day one.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item reveal-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Content</span>
+                                <span class="portfolio-tag">Social</span>
+                                <span class="portfolio-tag">Creative</span>
+                            </div>
+                            <h3>Home Goods Brand</h3>
+                            <p>Visual refresh, product photography direction, ongoing content creation, and social media management. Consistent execution with brand clarity.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item reveal-item">
+                        <div class="portfolio-content">
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Brand</span>
+                                <span class="portfolio-tag">Shopify</span>
                                 <span class="portfolio-tag">Content</span>
                             </div>
-                            <h3>Modern Wellness</h3>
-                            <p>Content system across TikTok and Instagram that built brand presence and drove qualified traffic to high-converting product pages.</p>
+                            <h3>Fashion Accessories</h3>
+                            <p>Full brand system, Shopify Plus build, content templates, and creative strategy. Designed for scale with content infrastructure.</p>
                         </div>
-                        <a href="#work" aria-label="View Modern Wellness project">View project</a>
                     </div>
-                    <div class="portfolio-item reveal-item" tabindex="0">
+                    <div class="portfolio-item reveal-item">
                         <div class="portfolio-content">
                             <div class="portfolio-tags">
-                                <span class="portfolio-tag">Shopify</span>
-                                <span class="portfolio-tag">Performance</span>
-                            </div>
-                            <h3>Apparel Collective</h3>
-                            <p>Custom Shopify theme optimized for mobile conversion. Improved site speed by 56% and checkout completion by 23%.</p>
-                        </div>
-                        <a href="#work" aria-label="View Apparel Collective project">View project</a>
-                    </div>
-                    <div class="portfolio-item reveal-item" tabindex="0">
-                        <div class="portfolio-content">
-                            <div class="portfolio-tags">
-                                <span class="portfolio-tag">Paid Ads</span>
-                                <span class="portfolio-tag">Shopify</span>
-                            </div>
-                            <h3>HomeGoods Direct</h3>
-                            <p>Rebuilt product pages and ad creative strategy. ROAS stabilized at 4.2x while tripling monthly ad spend profitably.</p>
-                        </div>
-                        <a href="#work" aria-label="View HomeGoods Direct project">View project</a>
-                    </div>
-                    <div class="portfolio-item reveal-item" tabindex="0">
-                        <div class="portfolio-content">
-                            <div class="portfolio-tags">
-                                <span class="portfolio-tag">Social</span>
                                 <span class="portfolio-tag">Brand</span>
+                                <span class="portfolio-tag">Social</span>
                             </div>
-                            <h3>Organic Tea Co</h3>
-                            <p>Brand identity, packaging, and content calendar that supported product launches and drove consistent organic engagement.</p>
+                            <h3>Beverage Brand Relaunch</h3>
+                            <p>Complete brand overhaul, packaging redesign, social content strategy, and daily execution across platforms. Premium positioning, consistent output.</p>
                         </div>
-                        <a href="#work" aria-label="View Organic Tea Co project">View project</a>
                     </div>
-                    <div class="portfolio-item reveal-item" tabindex="0">
+                    <div class="portfolio-item reveal-item">
                         <div class="portfolio-content">
                             <div class="portfolio-tags">
-                                <span class="portfolio-tag">Full-Funnel</span>
-                                <span class="portfolio-tag">Growth</span>
+                                <span class="portfolio-tag">TikTok Shop</span>
+                                <span class="portfolio-tag">Content</span>
+                                <span class="portfolio-tag">Social</span>
                             </div>
-                            <h3>Tech Accessories</h3>
-                            <p>End-to-end growth system: Google Ads, social content, landing page optimization, and email flows for repeat purchase.</p>
+                            <h3>Tech Accessories Launch</h3>
+                            <p>TikTok Shop optimization, live shopping content creation, product demos, and ongoing social execution. Content built to convert.</p>
                         </div>
-                        <a href="#work" aria-label="View Tech Accessories project">View project</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services -->
-        <section id="services">
+        <!-- Babysitter Section -->
+        <section class="babysitter">
+            <div class="container">
+                <div class="babysitter-content reveal-item">
+                    <h2>You don't need 5 freelancers. You need one team that executes.</h2>
+                    <p class="babysitter-subtitle">We're babysitters for small businesses. You hire us so you don't have to think about brand, content, posting, site builds, or creative strategy. We handle it.</p>
+                </div>
+                <div class="takeaway-grid">
+                    <div class="takeaway-card reveal-item">
+                        <h3>No More Vendor Juggling</h3>
+                        <p>Stop coordinating between designers, developers, social managers, and content creators. One partner handles everything.</p>
+                    </div>
+                    <div class="takeaway-card reveal-item">
+                        <h3>Execution Without Oversight</h3>
+                        <p>You shouldn't have to micromanage posting schedules, creative reviews, or campaign launches. We execute and keep you updated.</p>
+                    </div>
+                    <div class="takeaway-card reveal-item">
+                        <h3>Consistency You Can Trust</h3>
+                        <p>Your brand shows up daily with clarity and quality. No more gaps, no more scrambling for content, no more inconsistency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Packages Overview -->
+        <section class="packages-section" id="packages">
             <div class="container">
                 <div class="section-header reveal-item">
-                    <h2>How We Drive Growth</h2>
-                    <p>Every service connects acquisition, conversion, and retention — designed to scale revenue efficiently.</p>
+                    <h2>Choose Your Package</h2>
+                    <p>Two packages designed for different stages. Both focused on execution and clarity.</p>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card reveal-item">
-                        <h3>Paid Ads Management</h3>
-                        <p>Meta, TikTok, and Google campaigns aligned with landing page experience. Creative testing, funnel tracking, CAC/ROAS optimization, and responsible scaling — no wasted spend on broken post-click.</p>
+                <div class="packages-grid">
+                    <div class="package-card featured reveal-item">
+                        <h3>Creation Package</h3>
+                        <p class="package-subtitle">Build your brand from zero or rebuild it right</p>
+                        <p class="package-for">For: New brands or complete rebuilds</p>
+                        <ul class="package-includes">
+                            <li>Brand foundation and strategy</li>
+                            <li>Visual identity and packaging design</li>
+                            <li>Shopify site design and build</li>
+                            <li>Content strategy and templates</li>
+                            <li>Social media setup and execution</li>
+                            <li>TikTok Shop and live shopping setup</li>
+                            <li>Ongoing content creation and posting</li>
+                            <li>Creative direction and optimization</li>
+                        </ul>
+                        <div class="package-outcome">
+                            <strong>Outcome:</strong> A complete brand system that looks premium, consistent content across platforms, and commerce infrastructure ready to sell.
+                        </div>
+                        <a href="#contact" class="btn" style="width: 100%;">Book a Call</a>
                     </div>
-                    <div class="service-card reveal-item">
-                        <h3>Social Media Content & Management</h3>
-                        <p>Content strategy, creative direction, production guidance, publishing calendars, and community management. Consistent brand voice that supports conversion, not just engagement.</p>
-                    </div>
-                    <div class="service-card reveal-item">
-                        <h3>Shopify CRO & Store Optimization</h3>
-                        <p>Custom storefronts, checkout flow optimization, mobile speed, AOV strategies, and conversion-focused UX. Clean, intentional design that turns traffic into revenue.</p>
-                    </div>
-                    <div class="service-card reveal-item">
-                        <h3>Performance & Analytics</h3>
-                        <p>Funnel tracking, attribution modeling, and performance dashboards. We optimize for business metrics (CAC, LTV, ROAS, CVR, AOV) — not vanity metrics.</p>
-                    </div>
-                    <div class="service-card reveal-item">
-                        <h3>Creative Systems & Art Direction</h3>
-                        <p>Photography direction, ad creative frameworks, and content templates that maintain brand consistency across acquisition channels and onsite experience.</p>
-                    </div>
-                    <div class="service-card reveal-item">
-                        <h3>Brand Identity & Positioning</h3>
-                        <p>Logos, typography, color systems, and visual language designed to communicate value and support recognition across all brand touchpoints.</p>
+                    <div class="package-card reveal-item">
+                        <h3>Enhancement Package</h3>
+                        <p class="package-subtitle">Elevate an existing brand with execution and optimization</p>
+                        <p class="package-for">For: Existing brands needing elevation</p>
+                        <ul class="package-includes">
+                            <li>Visual and content audit</li>
+                            <li>Strategic refinement and positioning</li>
+                            <li>Content upgrade and systems</li>
+                            <li>Social media management and posting</li>
+                            <li>Shopify optimization (if applicable)</li>
+                            <li>Creative execution and asset creation</li>
+                            <li>Ongoing management and optimization</li>
+                        </ul>
+                        <div class="package-outcome">
+                            <strong>Outcome:</strong> Your brand looks more premium, content is consistent, and you stop worrying about execution. Clarity and momentum.
+                        </div>
+                        <a href="#contact" class="btn" style="width: 100%;">Book a Call</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Case Study -->
-        <section class="case-study">
+        <!-- TikTok Shop Differentiator -->
+        <section class="tiktok-section">
             <div class="container">
-                <div class="case-study-grid">
-                    <div class="reveal-item">
-                        <p class="case-label">Growth Case Study</p>
-                        <h2>32% CAC Reduction Through Creative + CRO Alignment</h2>
-                        <div class="case-block">
-                            <h3>The Problem</h3>
-                            <p>A DTC skincare brand was spending heavily on Meta ads but couldn't scale profitably. Creative was disconnected from landing page experience. CAC was climbing, ROAS was unstable, and checkout abandonment was 62%.</p>
-                        </div>
-                        <div class="case-block">
-                            <h3>What We Fixed</h3>
-                            <ul>
-                                <li>Rebuilt ad creative strategy to match landing page messaging and product hierarchy</li>
-                                <li>Optimized product pages for mobile, reduced checkout steps from 5 to 3</li>
-                                <li>Implemented strategic bundling on PDPs, increased AOV from $47 to $63</li>
-                                <li>Set up proper attribution and conversion tracking across Meta and Google</li>
-                            </ul>
-                        </div>
+                <div class="tiktok-content reveal-item">
+                    <h2>We Build Content to Sell, Not Just to Post</h2>
+                    <p>Most agencies post content and hope it works. We build content systems designed for commerce — TikTok Shop, live shopping, product demos, and content that converts.</p>
+                    <p>This is where brand-building meets actual revenue.</p>
+                </div>
+                <div class="tiktok-features">
+                    <div class="tiktok-feature reveal-item">
+                        <h3>TikTok Shop Setup</h3>
+                        <p>Full shop configuration, product listings, optimization for discoverability, and integration with your content strategy.</p>
                     </div>
-                    <div class="reveal-item">
-                        <h3>The Results</h3>
-                        <div class="deliverables-list">
-                            <span class="deliverable-chip">CAC down 32%</span>
-                            <span class="deliverable-chip">ROAS stable at 4.1x</span>
-                            <span class="deliverable-chip">AOV up 34%</span>
-                            <span class="deliverable-chip">$140k added monthly revenue</span>
-                        </div>
-                        <div class="case-block" style="margin-top: var(--spacing-2xl);">
-                            <h3>Key Insight</h3>
-                            <p>CAC improved because creative finally matched the landing page experience. Visitors arrived expecting what they saw in ads, found it immediately, and converted. Scaling spend became profitable because post-click conversion held strong.</p>
-                        </div>
+                    <div class="tiktok-feature reveal-item">
+                        <h3>Live Shopping Content</h3>
+                        <p>Scripted live sessions, product demos, and real-time engagement designed to drive sales during streams.</p>
+                    </div>
+                    <div class="tiktok-feature reveal-item">
+                        <h3>Product Content Systems</h3>
+                        <p>Repeatable templates for demos, UGC-style content, and value-driven posts that sell without feeling salesy.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Process -->
-        <section id="process">
-            <div class="container">
-                <div class="section-header reveal-item">
-                    <h2>How We Work</h2>
-                    <p>Clear process focused on aligning acquisition with conversion from day one.</p>
-                </div>
-                <div class="process-grid">
-                    <div class="process-card reveal-item">
-                        <div class="process-number">01</div>
-                        <h3>Growth Audit & Strategy</h3>
-                        <p>We audit your funnel, ad creative, landing pages, and analytics. Deliverable: prioritized growth plan with projected ROI.</p>
-                    </div>
-                    <div class="process-card reveal-item">
-                        <div class="process-number">02</div>
-                        <h3>Creative & Funnel Alignment</h3>
-                        <p>We align ad messaging with landing page experience and onsite conversion flows. No more disconnect between acquisition and conversion.</p>
-                    </div>
-                    <div class="process-card reveal-item">
-                        <div class="process-number">03</div>
-                        <h3>Build, Test, Scale</h3>
-                        <p>We execute across creative, ads, and store optimization. Weekly reporting on CAC, ROAS, CVR, and AOV — always tied to business outcomes.</p>
-                    </div>
-                    <div class="process-card reveal-item">
-                        <div class="process-number">04</div>
-                        <h3>Iterate & Optimize</h3>
-                        <p>Continuous testing and refinement based on performance data. We scale what works and kill what doesn't — fast.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Offers -->
-        <section>
+        <!-- How It Works -->
+        <section class="how-it-works">
             <div class="container">
                 <div class="section-header reveal-item">
-                    <h2>Growth Engagements</h2>
-                    <p>Choose the engagement model that matches your growth stage and goals.</p>
+                    <h2>How It Works</h2>
+                    <p>Three steps. No friction.</p>
                 </div>
-                <div class="offers-grid">
-                    <div class="offer-card reveal-item">
-                        <h3>Growth Audit</h3>
-                        <p class="offer-subtitle">Find your biggest growth leaks</p>
-                        <p class="offer-meta">Best for: Brands with traffic but poor conversion or CAC issues</p>
-                        <p class="offer-timeline">Timeline: 1 week</p>
-                        <ul class="offer-includes">
-                            <li>Full funnel analysis (ads → landing → checkout)</li>
-                            <li>Creative + landing page disconnect review</li>
-                            <li>CAC, ROAS, and conversion opportunity mapping</li>
-                            <li>Prioritized action plan with ROI estimates</li>
-                        </ul>
-                        <a href="#contact" class="btn">Request Audit</a>
+                <div class="steps-grid">
+                    <div class="step-card reveal-item">
+                        <div class="step-number">01</div>
+                        <h3>Fill Out Short Form</h3>
+                        <p>Tell us what you sell, your biggest challenge, and where you are. Takes 2 minutes.</p>
                     </div>
-                    <div class="offer-card featured reveal-item">
-                        <h3>Growth Sprint</h3>
-                        <p class="offer-subtitle">Integrated ads + CRO optimization</p>
-                        <p class="offer-meta">Best for: Brands doing $50k–$300k/month ready to scale</p>
-                        <p class="offer-timeline">Timeline: 8–10 weeks</p>
-                        <ul class="offer-includes">
-                            <li>Paid ads setup or optimization (Meta/Google/TikTok)</li>
-                            <li>Landing page + checkout flow rebuild</li>
-                            <li>Creative direction and testing frameworks</li>
-                            <li>AOV optimization (bundles, upsells)</li>
-                            <li>60 days of active testing and iteration</li>
-                        </ul>
-                        <a href="#contact" class="btn">Start Your Sprint</a>
+                    <div class="step-card reveal-item">
+                        <div class="step-number">02</div>
+                        <h3>Book a Call</h3>
+                        <p>After submitting, you'll book a Calendly call directly. We review your needs and discuss fit.</p>
                     </div>
-                    <div class="offer-card reveal-item">
-                        <h3>Growth Partnership</h3>
-                        <p class="offer-subtitle">Ongoing full-funnel growth management</p>
-                        <p class="offer-meta">Best for: Brands with evolving growth needs</p>
-                        <p class="offer-timeline">Timeline: Monthly retainer</p>
-                        <ul class="offer-includes">
-                            <li>Paid ads management across all platforms</li>
-                            <li>Social content strategy and management</li>
-                            <li>Ongoing CRO and store optimization</li>
-                            <li>Creative production and testing</li>
-                            <li>Performance reporting and strategic reviews</li>
-                        </ul>
-                        <a href="#contact" class="btn">Discuss Partnership</a>
+                    <div class="step-card reveal-item">
+                        <div class="step-number">03</div>
+                        <h3>We Send Estimate & Start</h3>
+                        <p>After the call, we send a pricing estimate. Once approved, we start executing.</p>
                     </div>
                 </div>
             </div>
@@ -1423,19 +1585,19 @@
                 </div>
                 <div class="testimonials-grid">
                     <div class="testimonial-card reveal-item">
-                        <p class="testimonial-quote">"Ascent Mgnt connected our ads to our store experience in a way no other agency had. CAC dropped 38% in the first month because creative finally matched what customers saw when they landed. We're scaling profitably for the first time."</p>
-                        <p class="testimonial-author">Sarah Mitchell</p>
-                        <p class="testimonial-role">Founder, Clean Beauty Co</p>
+                        <p class="testimonial-quote">"They took everything off my plate. I was juggling three freelancers and still stressed about consistency. Now I don't think about it — they just handle it."</p>
+                        <p class="testimonial-author">Sarah Chen</p>
+                        <p class="testimonial-role">Founder, Skincare Brand</p>
                     </div>
                     <div class="testimonial-card reveal-item">
-                        <p class="testimonial-quote">"They rebuilt our store and took over our Meta ads. The difference was night and day — ROAS stabilized at 4.2x while we tripled spend. Every decision is backed by data, not opinions."</p>
-                        <p class="testimonial-author">James Park</p>
-                        <p class="testimonial-role">Creative Director, Modern Apparel</p>
+                        <p class="testimonial-quote">"Content is finally consistent. Our brand actually looks legit now. Before, it felt scattered and DIY. Ascent made it look premium without the BS agency fluff."</p>
+                        <p class="testimonial-author">Marcus Rivera</p>
+                        <p class="testimonial-role">Co-Founder, Home Goods</p>
                     </div>
                     <div class="testimonial-card reveal-item">
-                        <p class="testimonial-quote">"Working with Ascent Mgnt felt like finally having a growth partner who understood both creative and conversion. They built our social content system and optimized our funnel. Revenue is up, CAC is down, and we have a repeatable process."</p>
-                        <p class="testimonial-author">Alex Rivera</p>
-                        <p class="testimonial-role">Co-Founder, HomeGoods Direct</p>
+                        <p class="testimonial-quote">"I hired them because I didn't want to think anymore. Best decision. They execute, keep me updated, and I can focus on running the business instead of chasing creatives."</p>
+                        <p class="testimonial-author">Jennifer Park</p>
+                        <p class="testimonial-role">Owner, Fashion Brand</p>
                     </div>
                 </div>
             </div>
@@ -1449,45 +1611,45 @@
                 </div>
                 <div class="faq-grid">
                     <details>
-                        <summary>How is this different from hiring separate agencies for ads and CRO?</summary>
+                        <summary>Is this for tiny brands or bigger brands?</summary>
                         <div class="faq-content">
-                            <p>We connect acquisition with conversion from day one. Most agencies run ads without optimizing the landing experience, or build stores without considering how traffic arrives. We align creative, landing pages, and checkout flows so acquisition actually converts.</p>
+                            <p>We work with small businesses in early to growth stage. If you're overwhelmed by managing brand, content, and execution yourself, you're a fit. If you're a huge corporation with an internal team, probably not.</p>
                         </div>
                     </details>
                     <details>
-                        <summary>Do you handle social media content or just paid ads?</summary>
+                        <summary>Do you actually do the content creation and posting?</summary>
                         <div class="faq-content">
-                            <p>Both. We build content systems (strategy, calendars, creative direction, posting, community management) that support brand presence and conversion. We also run paid campaigns across Meta, TikTok, and Google. The two work together to drive consistent growth.</p>
+                            <p>Yes. We create the content, schedule it, post it, and manage your social accounts. You approve direction upfront, but we handle daily execution so you don't have to think about it.</p>
                         </div>
                     </details>
                     <details>
-                        <summary>What if our store is already built? Can you just optimize it?</summary>
+                        <summary>Can you work with my existing brand or do I need a full rebuild?</summary>
                         <div class="faq-content">
-                            <p>Absolutely. We assess your current store and determine what's needed — sometimes it's minor CRO fixes, other times a full rebuild is required to hit your growth goals. We're transparent about what's necessary and why.</p>
+                            <p>Both. The Enhancement Package is for existing brands that need elevation and consistent execution. The Creation Package is for new brands or complete rebuilds. We assess during the call.</p>
                         </div>
                     </details>
                     <details>
-                        <summary>How quickly can we expect results?</summary>
+                        <summary>Do you build Shopify sites too?</summary>
                         <div class="faq-content">
-                            <p>Most clients see measurable improvements within 30–45 days. Ad performance and CRO changes can show impact immediately if traffic volume is sufficient. Full store builds take 6–10 weeks with ongoing optimization post-launch.</p>
+                            <p>Yes. Shopify design and build is included in the Creation Package. We also optimize existing Shopify sites in the Enhancement Package if needed.</p>
                         </div>
                     </details>
                     <details>
-                        <summary>Why focus on CAC and ROAS instead of just driving more traffic?</summary>
+                        <summary>How fast can we start?</summary>
                         <div class="faq-content">
-                            <p>Traffic means nothing if it doesn't convert profitably. We optimize for business metrics — CAC, ROAS, CVR, AOV, LTV — because that's what actually grows revenue. More traffic with poor conversion is just wasted spend.</p>
+                            <p>After the call and estimate approval, typically 1–2 weeks. We protect quality by limiting monthly client intake, so there may be a short wait depending on capacity.</p>
                         </div>
                     </details>
                     <details>
-                        <summary>Do you work with brands outside the US?</summary>
+                        <summary>What if I want to manage some parts myself?</summary>
                         <div class="faq-content">
-                            <p>Yes. We work with DTC brands globally. Most communication is asynchronous, and we're experienced coordinating across time zones and currency requirements.</p>
+                            <p>Then we're probably not a fit. Our model is built for founders who want one partner to handle execution end-to-end. If you want to DIY parts of it, you'll be better served elsewhere.</p>
                         </div>
                     </details>
                     <details>
-                        <summary>What's included in your Growth Partnership retainer?</summary>
+                        <summary>Do you guarantee specific results or metrics?</summary>
                         <div class="faq-content">
-                            <p>Ongoing paid ads management, social content strategy and posting, CRO and store optimization, creative production, performance reporting, and strategic reviews. Think of it as a full growth team without the overhead of hiring in-house.</p>
+                            <p>No. We guarantee quality execution, consistency, and strategic clarity. We can't control what your audience does, but we can control showing up with premium content daily.</p>
                         </div>
                     </details>
                 </div>
@@ -1495,14 +1657,262 @@
         </section>
 
         <!-- Final CTA -->
-        <section class="final-cta" id="contact">
+        <section>
             <div class="container">
-                <h2>Let's Build Your Growth System</h2>
-                <p>Book a growth call. We'll audit your funnel, identify your biggest opportunities, and show you exactly how we'd connect acquisition with conversion.</p>
-                <p class="capacity-note">We respond to inquiries within 24 hours</p>
-                <div class="cta-group" style="justify-content: center;">
-                    <a href="#contact" class="btn">Book a Growth Call</a>
-                    <a href="#contact" class="btn btn-secondary">Request Free Growth Audit</a>
+                <div class="final-cta">
+                    <h2>Ready to Stop Thinking and Start Executing?</h2>
+                    <p>Fill out the short form, book a call, and we'll review your needs. Pricing estimate shared after the call.</p>
+                    <a href="#contact" class="btn">Book a Call</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT PAGE -->
+        <section class="product-section" id="product">
+            <div class="container">
+                <div class="product-hero reveal-item">
+                    <h1>Brand Creation & Growth Package</h1>
+                    <p class="subtitle">The flagship done-for-you solution for building and scaling your brand</p>
+                </div>
+                <div class="product-grid">
+                    <div class="product-block reveal-item">
+                        <h2>What It Is</h2>
+                        <p>A complete brand-building system that takes you from idea to execution. We create your brand identity, build your site, set up content systems, manage your social, and integrate commerce infrastructure like TikTok Shop.</p>
+                        <p>You get a team that handles everything so you can focus on running your business.</p>
+                    </div>
+                    <div class="product-block reveal-item">
+                        <h2>Who It's For</h2>
+                        <p><strong>Perfect for:</strong></p>
+                        <ul>
+                            <li>New brands starting from zero</li>
+                            <li>Existing brands needing a complete rebuild</li>
+                            <li>Founders overwhelmed by managing multiple freelancers</li>
+                            <li>Brands ready to show up consistently with quality</li>
+                        </ul>
+                        <p style="margin-top: var(--spacing-md);"><strong>Not for:</strong></p>
+                        <ul>
+                            <li>DIY founders who want to manage parts themselves</li>
+                            <li>Large companies with internal teams</li>
+                            <li>Brands looking for quick fixes or shortcuts</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-grid">
+                    <div class="product-block reveal-item">
+                        <h2>What You Get</h2>
+                        <ul>
+                            <li>Brand foundation: strategy, positioning, messaging</li>
+                            <li>Visual identity: logo, typography, color systems</li>
+                            <li>Packaging design and print-ready files</li>
+                            <li>Shopify site: design, build, and optimization</li>
+                            <li>Content strategy and templates</li>
+                            <li>Social media setup and daily execution</li>
+                            <li>TikTok Shop configuration and live shopping content</li>
+                            <li>Ongoing creative direction and optimization</li>
+                            <li>Monthly performance reviews and strategic adjustments</li>
+                        </ul>
+                    </div>
+                    <div class="product-block reveal-item">
+                        <h2>The Process</h2>
+                        <p><strong>Week 1–2:</strong> Discovery, brand strategy, competitive audit</p>
+                        <p><strong>Week 3–6:</strong> Visual identity creation, site build, content systems</p>
+                        <p><strong>Week 7–8:</strong> Refinement, launch prep, social setup</p>
+                        <p><strong>Week 9+:</strong> Launch, ongoing execution, content creation, optimization</p>
+                        <p style="margin-top: var(--spacing-md);">Timeline varies based on scope. Most projects are 8–12 weeks to launch, then ongoing execution as needed.</p>
+                    </div>
+                </div>
+                <div class="product-cta reveal-item">
+                    <h2>Let's Talk</h2>
+                    <p>Fill out the short form and book a call. We'll review your needs and send a pricing estimate after the call.</p>
+                    <a href="#contact" class="btn">Book a Call</a>
+                    <p class="product-note">Pricing shared after reviewing your specific needs</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PACKAGES DETAIL PAGE -->
+        <section class="packages-detail-section">
+            <div class="container">
+                <div class="section-header reveal-item">
+                    <h2>Package Details</h2>
+                    <p>Full breakdown of what's included, timelines, and what to expect.</p>
+                </div>
+
+                <div class="package-detail reveal-item">
+                    <h2>Creation Package</h2>
+                    <p>Build your brand from zero or rebuild it completely. Full execution from strategy to daily content.</p>
+                    
+                    <h3>What's Included</h3>
+                    <ul>
+                        <li>Brand strategy and positioning workshop</li>
+                        <li>Competitive audit and market analysis</li>
+                        <li>Logo and visual identity system</li>
+                        <li>Typography, color palette, and design guidelines</li>
+                        <li>Packaging design (labels, boxes, inserts)</li>
+                        <li>Print-ready files and vendor coordination</li>
+                        <li>Shopify site design and custom build</li>
+                        <li>Product page templates and content architecture</li>
+                        <li>Content strategy and posting calendars</li>
+                        <li>Social media setup (Instagram, TikTok, etc.)</li>
+                        <li>TikTok Shop configuration and optimization</li>
+                        <li>Live shopping content creation and scripting</li>
+                        <li>Ongoing content creation (photos, videos, graphics)</li>
+                        <li>Daily posting and community management</li>
+                        <li>Monthly strategy reviews and optimization</li>
+                    </ul>
+
+                    <div class="timeline-info">
+                        <strong>Timeline:</strong> 8–12 weeks to launch, then ongoing execution. Exact timeline depends on scope and complexity.
+                    </div>
+
+                    <h3>What's Not Included</h3>
+                    <ul>
+                        <li>Ad spend (we create content, you manage paid ads if desired)</li>
+                        <li>Product photography shoots (we direct, you coordinate)</li>
+                        <li>PR and influencer outreach</li>
+                        <li>Physical product creation or manufacturing</li>
+                    </ul>
+
+                    <a href="#contact" class="btn" style="margin-top: var(--spacing-lg);">Book a Call</a>
+                </div>
+
+                <div class="package-detail reveal-item">
+                    <h2>Enhancement Package</h2>
+                    <p>Elevate an existing brand with strategic refinement and consistent execution.</p>
+                    
+                    <h3>What's Included</h3>
+                    <ul>
+                        <li>Brand and content audit</li>
+                        <li>Strategic refinement and positioning review</li>
+                        <li>Visual identity upgrade (if needed)</li>
+                        <li>Content systems and templates</li>
+                        <li>Social media management and daily posting</li>
+                        <li>Shopify optimization (speed, UX, design tweaks)</li>
+                        <li>Creative execution and asset creation</li>
+                        <li>TikTok Shop setup (if not already configured)</li>
+                        <li>Ongoing management and optimization</li>
+                        <li>Monthly performance reviews</li>
+                    </ul>
+
+                    <div class="timeline-info">
+                        <strong>Timeline:</strong> 4–6 weeks to implement upgrades, then ongoing execution.
+                    </div>
+
+                    <h3>What's Not Included</h3>
+                    <ul>
+                        <li>Complete brand overhaul (use Creation Package for that)</li>
+                        <li>Ad spend or media buying</li>
+                        <li>Full site rebuilds (minor optimizations only)</li>
+                    </ul>
+
+                    <a href="#contact" class="btn" style="margin-top: var(--spacing-lg);">Book a Call</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT PAGE -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-content reveal-item">
+                    <h2>About Ascent</h2>
+                    <p>We're a done-for-you creative agency built for small business founders who are tired of juggling freelancers and managing execution themselves.</p>
+                    <p>Our model is simple: you hire us so you don't have to think. We handle brand creation, content systems, social execution, and commerce infrastructure from start to finish.</p>
+                    <p>No fluff. No corporate buzzwords. Just consistent, high-quality execution designed to make your brand look premium and show up daily.</p>
+                </div>
+
+                <div class="section-header reveal-item" style="margin-top: var(--spacing-3xl);">
+                    <h2>Team</h2>
+                </div>
+                <div class="team-grid">
+                    <div class="team-member reveal-item">
+                        <h3>Creative Director</h3>
+                        <p>Brand strategy, visual identity, creative direction</p>
+                    </div>
+                    <div class="team-member reveal-item">
+                        <h3>Content Lead</h3>
+                        <p>Content systems, social strategy, execution</p>
+                    </div>
+                    <div class="team-member reveal-item">
+                        <h3>Developer</h3>
+                        <p>Shopify builds, optimization, technical execution</p>
+                    </div>
+                </div>
+
+                <div class="podcast-section reveal-item" style="margin-top: var(--spacing-3xl);">
+                    <h3>Podcast & Links</h3>
+                    <div class="podcast-links">
+                        <a href="#">Spotify</a>
+                        <a href="#">Apple Podcasts</a>
+                        <a href="#">YouTube</a>
+                        <a href="#">Newsletter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT PAGE -->
+        <section class="contact-form-section" id="contact">
+            <div class="container">
+                <div class="section-header reveal-item">
+                    <h2>Book a Call</h2>
+                    <p>Fill out the form below and book your call directly. We'll review and send an estimate after.</p>
+                </div>
+                <div class="form-wrapper">
+                    <form class="contact-form reveal-item">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="brand">Brand / Website</label>
+                            <input type="text" id="brand" name="brand" placeholder="yourbrand.com or brand name">
+                        </div>
+                        <div class="form-group">
+                            <label for="product">What do you sell?</label>
+                            <input type="text" id="product" name="product" placeholder="Skincare, apparel, home goods, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label for="challenge">Biggest challenge right now</label>
+                            <textarea id="challenge" name="challenge" placeholder="What's overwhelming you or holding you back?"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@email.com" required>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Submit & Book Call</button>
+                    </form>
+                    <div class="calendly-placeholder reveal-item">
+                        <p><strong>Calendly Embed Here</strong></p>
+                        <p style="margin-top: var(--spacing-sm);">After submitting, you'll be able to book your call directly on this page.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRIVACY PAGE -->
+        <section class="privacy-section" id="privacy">
+            <div class="container">
+                <div class="privacy-content reveal-item">
+                    <h1>Privacy Policy</h1>
+                    <p style="margin-bottom: var(--spacing-xl);">Last updated: January 2026</p>
+
+                    <h2>Information We Collect</h2>
+                    <p>We collect information you provide directly to us when you fill out forms, book calls, or communicate with our team. This includes your name, email, business details, and any information you choose to share about your brand or challenges.</p>
+
+                    <h2>How We Use Your Information</h2>
+                    <p>We use the information we collect to respond to your inquiries, schedule consultations, provide estimates, and deliver our services. We may also use your information to send occasional updates about our services if you've opted in.</p>
+
+                    <h2>Information Sharing</h2>
+                    <p>We do not sell or rent your personal information to third parties. We may share information with service providers who assist us in operating our business (such as email services or scheduling tools), but only to the extent necessary to provide those services.</p>
+
+                    <h2>Data Security</h2>
+                    <p>We take reasonable measures to protect your information from unauthorized access, alteration, or destruction. However, no internet transmission is completely secure, and we cannot guarantee absolute security.</p>
+
+                    <h2>Your Rights</h2>
+                    <p>You have the right to access, correct, or delete your personal information. You can also opt out of marketing communications at any time. Contact us directly to exercise these rights.</p>
+
+                    <h2>Contact</h2>
+                    <p>If you have questions about this privacy policy or how we handle your information, please contact us through the contact form or at the email provided on our website.</p>
                 </div>
             </div>
         </section>
@@ -1514,29 +1924,24 @@
             <div class="footer-grid">
                 <div class="footer-brand reveal-item">
                     <h3>Ascent Mgnt</h3>
-                    <p>Digital marketing agency for growing DTC brands. We connect acquisition (paid ads + social) with conversion (CRO + Shopify optimization) to scale revenue efficiently.</p>
-                    <div class="footer-form">
-                        <h4>Growth Inquiries</h4>
-                        <input type="email" placeholder="your@email.com" aria-label="Email address">
-                        <button class="btn" style="width: 100%;">Send Inquiry</button>
-                    </div>
+                    <p>Done-for-you brand creation and growth. We build brands, create content, manage social, and handle execution so you can focus on your business.</p>
                 </div>
                 <div class="footer-nav reveal-item">
-                    <h4>Services</h4>
+                    <h4>Pages</h4>
                     <ul>
-                        <li><a href="#services">Paid Ads Management</a></li>
-                        <li><a href="#services">Social Media</a></li>
-                        <li><a href="#services">Shopify CRO</a></li>
-                        <li><a href="#services">Performance Marketing</a></li>
-                        <li><a href="#services">Creative Systems</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                        <li><a href="#product">Product</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-nav reveal-item">
-                    <h4>Company</h4>
+                    <h4>Legal</h4>
                     <ul>
-                        <li><a href="#work">Selected Work</a></li>
-                        <li><a href="#process">How We Work</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#contact">Book a Call</a></li>
                     </ul>
                 </div>
             </div>
@@ -1549,166 +1954,42 @@
     <script>
         // Sticky header scroll state
         const header = document.querySelector('header');
-
         window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll >= 12) {
+            if (window.pageYOffset >= 12) {
                 header.classList.add('is-scrolled');
             } else {
                 header.classList.remove('is-scrolled');
             }
         }, { passive: true });
 
-        // Scroll reveal animations with IntersectionObserver
+        // Scroll reveal animations
         const revealItems = document.querySelectorAll('.reveal-item');
-
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     const container = entry.target.parentElement;
                     const siblings = Array.from(container.querySelectorAll('.reveal-item'));
                     const itemIndex = siblings.indexOf(entry.target);
-
-                    // Stagger delay: 75ms per item, max 240ms
                     const delay = Math.min(itemIndex * 75, 240);
-
                     setTimeout(() => {
                         entry.target.classList.add('revealed');
                     }, delay);
-
-                    // Reveal once - unobserve after revealing
                     revealObserver.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
-
-        revealItems.forEach(item => {
-            revealObserver.observe(item);
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         });
+        revealItems.forEach(item => revealObserver.observe(item));
 
-        // FAQ smooth animation handler
-        (function () {
-            const detailsElements = document.querySelectorAll('details');
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-            detailsElements.forEach(details => {
-                const summary = details.querySelector('summary');
-                const content = details.querySelector('.faq-content');
-
-                let isAnimating = false;
-
-                summary.addEventListener('click', (e) => {
-                    // If reduced motion, let browser handle it natively
-                    if (prefersReducedMotion) return;
-
-                    // Prevent animation conflicts
-                    if (isAnimating) {
-                        e.preventDefault();
-                        return;
-                    }
-
-                    e.preventDefault();
-                    isAnimating = true;
-
-                    const isOpen = details.hasAttribute('open');
-
-                    if (isOpen) {
-                        // Closing
-                        const startHeight = details.offsetHeight;
-
-                        // Remove open attribute
-                        details.removeAttribute('open');
-
-                        const endHeight = details.offsetHeight;
-
-                        // Animate from current height to collapsed height
-                        details.style.height = startHeight + 'px';
-                        details.setAttribute('open', '');
-
-                        requestAnimationFrame(() => {
-                            details.style.overflow = 'hidden';
-                            details.style.height = startHeight + 'px';
-                            details.style.transition = 'height 300ms cubic-bezier(0.2, 0.8, 0.2, 1)';
-                            content.style.transition = 'opacity 300ms cubic-bezier(0.2, 0.8, 0.2, 1)';
-                            content.style.opacity = '0';
-
-                            requestAnimationFrame(() => {
-                                details.style.height = endHeight + 'px';
-                            });
-                        });
-
-                        setTimeout(() => {
-                            details.removeAttribute('open');
-                            details.style.height = '';
-                            details.style.overflow = '';
-                            details.style.transition = '';
-                            content.style.transition = '';
-                            content.style.opacity = '';
-                            isAnimating = false;
-                        }, 300);
-
-                    } else {
-                        // Opening
-                        const startHeight = details.offsetHeight;
-
-                        details.setAttribute('open', '');
-
-                        const endHeight = details.offsetHeight;
-
-                        // Animate from collapsed to expanded
-                        details.style.height = startHeight + 'px';
-                        details.style.overflow = 'hidden';
-
-                        requestAnimationFrame(() => {
-                            details.style.transition = 'height 300ms cubic-bezier(0.2, 0.8, 0.2, 1)';
-                            content.style.transition = 'opacity 300ms cubic-bezier(0.2, 0.8, 0.2, 1)';
-                            content.style.opacity = '0';
-
-                            requestAnimationFrame(() => {
-                                details.style.height = endHeight + 'px';
-                                content.style.opacity = '1';
-                            });
-                        });
-
-                        setTimeout(() => {
-                            details.style.height = '';
-                            details.style.overflow = '';
-                            details.style.transition = '';
-                            content.style.transition = '';
-                            isAnimating = false;
-                        }, 300);
-                    }
-                });
-
-                // Support keyboard interaction (Enter/Space)
-                summary.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        summary.click();
-                    }
-                });
-            });
-        })();
-
-        // Interactive Bubble Background
+        // Bubble background animation
         (function () {
             const canvas = document.getElementById('bubbleCanvas');
             const ctx = canvas.getContext('2d');
             const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            let width, height, bubbles = [], mouseX = 0, mouseY = 0, animationFrameId;
 
-            let width, height;
-            let bubbles = [];
-            let mouseX = 0;
-            let mouseY = 0;
-            let animationFrameId;
-
-            // Resize canvas to match container
             function resizeCanvas() {
                 const heroSection = canvas.parentElement;
                 width = heroSection.offsetWidth;
@@ -1717,50 +1998,38 @@
                 canvas.height = height;
             }
 
-            // Bubble class
             class Bubble {
                 constructor() {
                     this.reset();
                 }
-
                 reset() {
                     this.x = Math.random() * width;
                     this.y = height + Math.random() * 100;
-                    this.radius = Math.random() * 3 + 1; // 1-4px radius
-                    this.speedY = Math.random() * 0.5 + 0.3; // Slow upward drift
+                    this.radius = Math.random() * 3 + 1;
+                    this.speedY = Math.random() * 0.5 + 0.3;
                     this.speedX = (Math.random() - 0.5) * 0.3;
-                    this.opacity = Math.random() * 0.15 + 0.05; // 0.05-0.2 opacity
+                    this.opacity = Math.random() * 0.15 + 0.05;
                     this.wobble = Math.random() * 0.02;
                     this.wobbleSpeed = Math.random() * 0.02 + 0.01;
                     this.wobbleOffset = Math.random() * Math.PI * 2;
                 }
-
                 update(deltaTime) {
-                    // Upward drift
                     this.y -= this.speedY * deltaTime * 0.06;
-
-                    // Horizontal wobble
                     this.wobbleOffset += this.wobbleSpeed * deltaTime * 0.001;
                     this.x += Math.sin(this.wobbleOffset) * this.wobble * deltaTime * 0.06;
-
-                    // Mouse interaction (gentle repel)
                     const dx = this.x - mouseX;
                     const dy = this.y - mouseY;
                     const distance = Math.sqrt(dx * dx + dy * dy);
                     const minDistance = 120;
-
                     if (distance < minDistance) {
                         const force = (minDistance - distance) / minDistance;
                         this.x += (dx / distance) * force * 0.5;
                         this.y += (dy / distance) * force * 0.5;
                     }
-
-                    // Reset if bubble goes off screen
                     if (this.y < -20 || this.x < -20 || this.x > width + 20) {
                         this.reset();
                     }
                 }
-
                 draw() {
                     ctx.beginPath();
                     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
@@ -1769,46 +2038,38 @@
                 }
             }
 
-            // Initialize bubbles
             function initBubbles() {
                 bubbles = [];
-                const bubbleCount = Math.floor((width * height) / 8000); // Density based on area
+                const bubbleCount = Math.floor((width * height) / 8000);
                 for (let i = 0; i < bubbleCount; i++) {
                     bubbles.push(new Bubble());
                 }
             }
 
-            // Animation loop
             let lastTime = 0;
             function animate(currentTime) {
                 const deltaTime = currentTime - lastTime;
                 lastTime = currentTime;
-
                 ctx.clearRect(0, 0, width, height);
-
                 bubbles.forEach(bubble => {
                     if (!prefersReducedMotion) {
                         bubble.update(deltaTime);
                     }
                     bubble.draw();
                 });
-
                 animationFrameId = requestAnimationFrame(animate);
             }
 
-            // Mouse tracking
             canvas.addEventListener('mousemove', (e) => {
                 const rect = canvas.getBoundingClientRect();
                 mouseX = e.clientX - rect.left;
                 mouseY = e.clientY - rect.top;
             });
 
-            // Initialize
             resizeCanvas();
             initBubbles();
             animate(0);
 
-            // Handle resize
             let resizeTimeout;
             window.addEventListener('resize', () => {
                 clearTimeout(resizeTimeout);
@@ -1816,13 +2077,6 @@
                     resizeCanvas();
                     initBubbles();
                 }, 250);
-            });
-
-            // Cleanup on page unload
-            window.addEventListener('beforeunload', () => {
-                if (animationFrameId) {
-                    cancelAnimationFrame(animationFrameId);
-                }
             });
         })();
     </script>
