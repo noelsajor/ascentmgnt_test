@@ -1,0 +1,1875 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Shopify Design Studio | Ascent Mgnt</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-0: #0C0D0F;
+            --bg-1: #121417;
+            --surface: #171A1F;
+            --surface-2: #1E2229;
+            --text: #F2F2F2;
+            --muted: rgba(242, 242, 242, 0.72);
+            --line: rgba(255, 255, 255, 0.08);
+            --accent: #E9D090;
+            --accent-2: #F3E1B5;
+            --max-width: 1280px;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --spacing-2xl: 4rem;
+            --spacing-3xl: 6rem;
+            --spacing-4xl: 8rem;
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 28px;
+            --radius-full: 999px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                transform: none !important;
+            }
+
+            .reveal-item {
+                opacity: 1 !important;
+                transform: none !important;
+                filter: none !important;
+            }
+        }
+
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg-0);
+            font-size: 17px;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--accent);
+            color: var(--bg-0);
+            padding: var(--spacing-sm) var(--spacing-md);
+            text-decoration: none;
+            z-index: 100;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            top: var(--spacing-sm);
+            left: var(--spacing-sm);
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(12, 13, 15, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--line);
+            z-index: 50;
+            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        header.is-scrolled {
+            background: rgba(12, 13, 15, 0.88);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .header-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: var(--spacing-md) var(--spacing-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--text);
+        }
+
+        nav a:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
+            border-radius: 4px;
+            color: var(--text);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            background: var(--accent);
+            color: var(--bg-0);
+            text-decoration: none;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 8px rgba(233, 208, 144, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.4s ease-out;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            background: var(--accent-2);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(233, 208, 144, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--line);
+            box-shadow: none;
+            font-size: 0.875rem;
+            padding: 0.75rem 1.5rem;
+        }
+
+        .btn-secondary::before {
+            display: none;
+        }
+
+        .btn-secondary:hover {
+            background: var(--surface);
+            border-color: var(--accent);
+            box-shadow: 0 4px 16px rgba(233, 208, 144, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary:active {
+            transform: translateY(0);
+        }
+
+        /* Container */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        /* Hero with Bubble Background */
+        .hero {
+            padding: 8rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bubble-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            line-height: 1.02;
+            font-weight: 700;
+            margin-bottom: var(--spacing-lg);
+            letter-spacing: -0.03em;
+            color: var(--text);
+        }
+
+        .hero-subtitle {
+            font-size: 1.375rem;
+            color: var(--muted);
+            margin-bottom: var(--spacing-2xl);
+            line-height: 1.6;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .proof-points {
+            list-style: none;
+            margin-bottom: var(--spacing-2xl);
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-xl);
+            flex-wrap: wrap;
+        }
+
+        .proof-points li {
+            padding: 0;
+            font-size: 1rem;
+            color: var(--muted);
+        }
+
+        .cta-group {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            align-items: center;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .cta-note {
+            font-size: 0.875rem;
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        /* Social Proof */
+        .social-proof {
+            background: var(--surface);
+            padding: var(--spacing-2xl) 0;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .social-proof-content {
+            text-align: center;
+        }
+
+        .trust-line {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .logo-pills {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .pill {
+            background: var(--bg-1);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--muted);
+            border: 1px solid var(--line);
+        }
+
+        .capabilities-line {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            margin: var(--spacing-xl) 0 var(--spacing-md);
+        }
+
+        .capability-tags {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+
+        .capability-tag {
+            background: transparent;
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: var(--spacing-4xl) 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: var(--spacing-md);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.08;
+        }
+
+        .section-header p {
+            font-size: 1.125rem;
+            color: var(--muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-lg);
+        }
+
+        .portfolio-item {
+            background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-2xl);
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .portfolio-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(233, 208, 144, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .portfolio-item:hover,
+        .portfolio-item:focus-within {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(233, 208, 144, 0.15);
+        }
+
+        .portfolio-item:hover::before,
+        .portfolio-item:focus-within::before {
+            opacity: 1;
+        }
+
+        .portfolio-item:focus-within {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .portfolio-content {
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .portfolio-item:hover .portfolio-content,
+        .portfolio-item:focus-within .portfolio-content {
+            transform: translateY(-4px);
+        }
+
+        .portfolio-tags {
+            display: flex;
+            gap: var(--spacing-xs);
+            margin-bottom: var(--spacing-md);
+            flex-wrap: wrap;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .portfolio-item:hover .portfolio-tags,
+        .portfolio-item:focus-within .portfolio-tags {
+            opacity: 1;
+        }
+
+        .portfolio-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-full);
+            border: 1px solid var(--line);
+            background: var(--bg-1);
+        }
+
+        .portfolio-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .portfolio-item p {
+            color: var(--muted);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .portfolio-item a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            text-indent: -9999px;
+        }
+
+        .portfolio-item a:focus-visible {
+            outline: none;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-xl);
+        }
+
+        .service-card {
+            padding: var(--spacing-2xl);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, var(--surface) 0%, rgba(23, 26, 31, 0.5) 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(233, 208, 144, 0.15);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card h3 {
+            font-size: 1.375rem;
+            margin-bottom: var(--spacing-md);
+            font-weight: 600;
+            color: var(--text);
+            letter-spacing: -0.01em;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        /* Case Study */
+        .case-study {
+            background: var(--bg-1);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            padding: var(--spacing-4xl) 0;
+        }
+
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-3xl);
+        }
+
+        .case-study h2 {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
+
+        .case-label {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: var(--spacing-sm);
+            font-weight: 600;
+        }
+
+        .case-block {
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .case-block h3 {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .case-block p,
+        .case-block ul {
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .case-block ul {
+            list-style: none;
+            padding-left: var(--spacing-md);
+        }
+
+        .case-block li {
+            padding: var(--spacing-sm) 0;
+            position: relative;
+            padding-left: var(--spacing-md);
+        }
+
+        .case-block li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        .deliverables-list {
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+            margin-top: var(--spacing-lg);
+        }
+
+        .deliverable-chip {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            color: var(--muted);
+        }
+
+        /* Process */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-lg);
+        }
+
+        .process-card {
+            text-align: left;
+            padding: var(--spacing-xl);
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-md);
+            transition: all 0.3s;
+        }
+
+        .process-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .process-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+            color: var(--bg-0);
+            border-radius: 50%;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            font-size: 1rem;
+        }
+
+        .process-card h3 {
+            font-size: 1.125rem;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .process-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Offers */
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+        }
+
+        .offer-card {
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-2xl);
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, var(--surface) 0%, rgba(23, 26, 31, 0.5) 100%);
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .offer-card.featured {
+            border-color: var(--accent);
+            box-shadow: 0 8px 32px rgba(233, 208, 144, 0.2);
+        }
+
+        .offer-card.featured::before {
+            content: 'MOST REQUESTED';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: var(--bg-0);
+            padding: 0.375rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .offer-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(233, 208, 144, 0.12);
+        }
+
+        .offer-card h3 {
+            font-size: 1.625rem;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .offer-subtitle {
+            color: var(--muted);
+            margin-bottom: var(--spacing-lg);
+            font-size: 0.95rem;
+        }
+
+        .offer-meta {
+            font-size: 0.875rem;
+            color: var(--accent);
+            margin-bottom: var(--spacing-md);
+            font-weight: 500;
+        }
+
+        .offer-timeline {
+            font-size: 0.875rem;
+            color: var(--muted);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .offer-includes {
+            list-style: none;
+            margin-bottom: var(--spacing-xl);
+            flex-grow: 1;
+        }
+
+        .offer-includes li {
+            padding: var(--spacing-sm) 0;
+            padding-left: var(--spacing-lg);
+            position: relative;
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        .offer-includes li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--bg-1);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+        }
+
+        .testimonial-card {
+            background: var(--surface);
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--line);
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .testimonial-quote {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            margin-bottom: var(--spacing-xl);
+            color: var(--text);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            color: var(--text);
+        }
+
+        .testimonial-role {
+            font-size: 0.875rem;
+            color: var(--muted);
+        }
+
+        /* FAQ */
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-md);
+            padding: var(--spacing-lg);
+            transition: border-color 0.3s;
+            overflow: hidden;
+        }
+
+        details:hover {
+            border-color: var(--accent);
+        }
+
+        details[open] {
+            border-color: var(--accent);
+        }
+
+        summary {
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1.05rem;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text);
+            user-select: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            font-size: 1.5rem;
+            color: var(--accent);
+            transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            flex-shrink: 0;
+            margin-left: var(--spacing-md);
+        }
+
+        details[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            summary::after {
+                transition: none;
+            }
+        }
+
+        summary:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
+            border-radius: var(--radius-sm);
+        }
+
+        .faq-content {
+            margin-top: var(--spacing-md);
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: var(--spacing-3xl);
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        }
+
+        .final-cta h2 {
+            font-size: clamp(2rem, 3vw, 2.75rem);
+            margin-bottom: var(--spacing-md);
+            color: var(--text);
+        }
+
+        .final-cta p {
+            font-size: 1.125rem;
+            color: var(--muted);
+            margin-bottom: var(--spacing-sm);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .capacity-note {
+            font-size: 0.875rem;
+            color: var(--accent);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-1);
+            color: var(--muted);
+            padding: var(--spacing-3xl) 0 var(--spacing-lg);
+            border-top: 1px solid var(--line);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: var(--spacing-3xl);
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .footer-brand h3 {
+            color: var(--text);
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer-brand p {
+            color: var(--muted);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.7;
+        }
+
+        .footer-nav h4 {
+            color: var(--accent);
+            margin-bottom: var(--spacing-md);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+        }
+
+        .footer-nav ul {
+            list-style: none;
+        }
+
+        .footer-nav li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .footer-nav a:hover {
+            color: var(--text);
+        }
+
+        .footer-nav a:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        .footer-form {
+            margin-top: var(--spacing-md);
+        }
+
+        .footer-form h4 {
+            color: var(--text);
+            margin-top: var(--spacing-lg);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1rem;
+        }
+
+        .footer-form input {
+            width: 100%;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 1px solid var(--line);
+            background: var(--surface);
+            color: var(--text);
+            border-radius: var(--radius-sm);
+            margin-bottom: var(--spacing-sm);
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+
+        .footer-form input::placeholder {
+            color: var(--muted);
+        }
+
+        .footer-form input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(233, 208, 144, 0.1);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--line);
+            padding-top: var(--spacing-lg);
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        /* Reveal Animation Classes */
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(10px);
+            filter: blur(6px);
+            transition: opacity 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+                transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+                filter 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .reveal-item.revealed {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            section {
+                padding: 4rem 0;
+            }
+
+            .hero {
+                padding: 5rem 0;
+            }
+
+            .portfolio-grid,
+            .case-study-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+
+            .offers-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .proof-points {
+                flex-direction: column;
+                align-items: center;
+                gap: var(--spacing-md);
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 2.75rem 0;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
+
+            .cta-group .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .container {
+                padding: 0 var(--spacing-md);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">Ascent Mgnt</a>
+            <nav>
+                <ul>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#services">Capabilities</a></li>
+                    <li><a href="#process">Studio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#work" class="btn">View Work</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Hero with Interactive Bubble Background -->
+        <section class="hero">
+            <canvas class="bubble-canvas" id="bubbleCanvas"></canvas>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Premium Shopify Design Studio</h1>
+                    <p class="hero-subtitle">We create brand-led Shopify experiences that feel expensive and convert
+                        naturally. Brand identity, packaging, and custom Shopify builds for discerning DTC brands.</p>
+                    <ul class="proof-points">
+                        <li>Brand-led Shopify experiences</li>
+                        <li>Crafted systems across web + packaging</li>
+                        <li>Clean, fast, accessible builds</li>
+                    </ul>
+                    <div class="cta-group">
+                        <a href="#work" class="btn">View Selected Work</a>
+                        <a href="#contact" class="btn btn-secondary">Request Studio Intro Call</a>
+                    </div>
+                    <p class="cta-note">Limited client slots per month to protect quality</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof -->
+        <section class="social-proof">
+            <div class="container">
+                <div class="social-proof-content">
+                    <p class="trust-line">Selected Clients</p>
+                    <div class="logo-pills">
+                        <span class="pill">Premium Beauty Co</span>
+                        <span class="pill">Modern Apparel</span>
+                        <span class="pill">HomeGoods Direct</span>
+                        <span class="pill">Wellness Brand</span>
+                        <span class="pill">Tech Accessories</span>
+                        <span class="pill">Sustainable Living</span>
+                    </div>
+                    <p class="capabilities-line">Capabilities</p>
+                    <div class="capability-tags">
+                        <span class="capability-tag">Shopify</span>
+                        <span class="capability-tag">Brand Identity</span>
+                        <span class="capability-tag">Packaging</span>
+                        <span class="capability-tag">Art Direction</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section class="portfolio" id="work">
+            <div class="container">
+                <div class="section-header reveal-item">
+                    <h2>Selected Work</h2>
+                    <p>Brand systems and Shopify experiences designed to elevate perception and support growth.</p>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item reveal-item" tabindex="0">
+                        <div class="portfolio-content">
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Shopify</span>
+                                <span class="portfolio-tag">Brand</span>
+                            </div>
+                            <h3>Clean Skincare Co</h3>
+                            <p>Complete brand refresh and custom Shopify build. Improved clarity and product discovery
+                                through editorial layouts.</p>
+                        </div>
+                        <a href="#work" aria-label="View Clean Skincare Co project">View project</a>
+                    </div>
+                    <div class="portfolio-item reveal-item" tabindex="0">
+                        <div class="portfolio-content">
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Packaging</span>
+                                <span class="portfolio-tag">Brand</span>
+                            </div>
+                            <h3>Modern Wellness</h3>
+                            <p>Minimalist packaging system and brand identity designed to communicate premium quality
+                                across touchpoints.</p>
+                        </div>
+                        <a href="#work" aria-label="View Modern Wellness project">View project</a>
+                    </div>
+                    <div class="portfolio-item reveal-item" tabindex="0">
+                        <div class="portfolio-content">
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Shopify</span>
+                                <span class="portfolio-tag">Theme Dev</span>
+                            </div>
+                            <h3>Apparel Collective</h3>
+                            <p>Custom Liquid theme with advanced filtering and modular content systems. Built for scale
+                                and editorial flexibility.</p>
+                        </div>
+                        <a href="#work" aria-label="View Apparel Collective project">View project</a>
+                    </div>
+                    <div class="portfolio-item reveal-item" tabindex="0">
+                        <div class="portfolio-content">
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Shopify</span>
+                                <span class="portfolio-tag">Brand</span>
+                            </div>
+                            <h3>HomeGoods Direct</h3>
+                            <p>Shopify Plus redesign emphasizing product photography and streamlined purchase paths.</p>
+                        </div>
+                        <a href="#work" aria-label="View HomeGoods Direct project">View project</a>
+                    </div>
+                    <div class="portfolio-item reveal-item" tabindex="0">
+                        <div class="portfolio-content">
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Brand</span>
+                                <span class="portfolio-tag">Packaging</span>
+                            </div>
+                            <h3>Organic Tea Co</h3>
+                            <p>Full brand system including logo, packaging, and supporting collateral. Designed for
+                                shelf presence and digital coherence.</p>
+                        </div>
+                        <a href="#work" aria-label="View Organic Tea Co project">View project</a>
+                    </div>
+                    <div class="portfolio-item reveal-item" tabindex="0">
+                        <div class="portfolio-content">
+                            <div class="portfolio-tags">
+                                <span class="portfolio-tag">Shopify</span>
+                                <span class="portfolio-tag">Art Direction</span>
+                            </div>
+                            <h3>Tech Accessories</h3>
+                            <p>Shopify build with custom product visualization and art direction for photography and
+                                content strategy.</p>
+                        </div>
+                        <a href="#work" aria-label="View Tech Accessories project">View project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services">
+            <div class="container">
+                <div class="section-header reveal-item">
+                    <h2>Studio Capabilities</h2>
+                    <p>Every project is approached with taste, clarity, and an understanding of how design supports
+                        commerce.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card reveal-item">
+                        <h3>Shopify Experience Design</h3>
+                        <p>Custom storefronts built with editorial sensibility and commercial clarity. Clean layouts,
+                            intentional hierarchy, and natural conversion paths.</p>
+                    </div>
+                    <div class="service-card reveal-item">
+                        <h3>Custom Theme Development</h3>
+                        <p>Bespoke Liquid themes and section-based systems. Full control over layout, typography, and
+                            interaction without template constraints.</p>
+                    </div>
+                    <div class="service-card reveal-item">
+                        <h3>Brand Identity Systems</h3>
+                        <p>Logos, typography, color systems, and visual language designed to communicate value and
+                            support recognition across all brand touchpoints.</p>
+                    </div>
+                    <div class="service-card reveal-item">
+                        <h3>Packaging & Print Design</h3>
+                        <p>Product packaging, inserts, labels, and collateral that extend brand systems into physical
+                            space with precision and craft.</p>
+                    </div>
+                    <div class="service-card reveal-item">
+                        <h3>Art Direction & Content Guidance</h3>
+                        <p>Photography direction, content strategy, and visual guidelines to ensure brand consistency
+                            across product imagery and marketing.</p>
+                    </div>
+                    <div class="service-card reveal-item">
+                        <h3>Performance & Accessibility</h3>
+                        <p>Speed optimization, semantic markup, and accessible design patterns built in from the start.
+                            Quality without compromise.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study -->
+        <section class="case-study">
+            <div class="container">
+                <div class="case-study-grid">
+                    <div class="reveal-item">
+                        <p class="case-label">Studio Project</p>
+                        <h2>Brand & Storefront for a DTC Skincare Label</h2>
+                        <div class="case-block">
+                            <h3>The Brief</h3>
+                            <p>A clean beauty brand needed a complete visual identity and Shopify presence that
+                                communicated premium quality without pretension. The existing site felt generic and
+                                didn't reflect the product's thoughtful formulation.</p>
+                        </div>
+                        <div class="case-block">
+                            <h3>Design Decisions</h3>
+                            <ul>
+                                <li>Developed a restrained typographic system with generous whitespace to emphasize
+                                    product photography</li>
+                                <li>Created a brand mark and color palette that felt modern and clinical without being
+                                    cold</li>
+                                <li>Built custom Shopify sections for ingredient transparency and editorial product
+                                    stories</li>
+                                <li>Simplified product hierarchy and checkout flow to reduce cognitive load</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="reveal-item">
+                        <h3>Deliverables</h3>
+                        <div class="deliverables-list">
+                            <span class="deliverable-chip">Brand Identity System</span>
+                            <span class="deliverable-chip">Packaging Design</span>
+                            <span class="deliverable-chip">Custom Shopify Theme</span>
+                            <span class="deliverable-chip">Product Photography Direction</span>
+                            <span class="deliverable-chip">Content Templates</span>
+                        </div>
+                        <div class="case-block" style="margin-top: var(--spacing-2xl);">
+                            <h3>Outcome</h3>
+                            <p>The brand now communicates premium quality at every touchpoint. Customers report feeling
+                                more confident in their purchase decisions. The store loads quickly, feels premium, and
+                                supports a smoother purchase journey from discovery to checkout.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section id="process">
+            <div class="container">
+                <div class="section-header reveal-item">
+                    <h2>Studio Process</h2>
+                    <p>Collaborative, transparent, and designed to protect quality at every stage.</p>
+                </div>
+                <div class="process-grid">
+                    <div class="process-card reveal-item">
+                        <div class="process-number">01</div>
+                        <h3>Discovery & Brand Audit</h3>
+                        <p>We review your brand positioning, existing assets, and competitive landscape. Deliverables:
+                            audit document and strategic recommendations.</p>
+                    </div>
+                    <div class="process-card reveal-item">
+                        <div class="process-number">02</div>
+                        <h3>Creative Direction & System Design</h3>
+                        <p>We develop visual direction, typography, and layout systems. Deliverables: design concepts,
+                            brand guidelines, and Shopify wireframes.</p>
+                    </div>
+                    <div class="process-card reveal-item">
+                        <div class="process-number">03</div>
+                        <h3>Build & Refinement</h3>
+                        <p>Custom theme development, content integration, and iterative refinement. Deliverables:
+                            staging site, documentation, and asset library.</p>
+                    </div>
+                    <div class="process-card reveal-item">
+                        <div class="process-number">04</div>
+                        <h3>Launch & Ongoing Care</h3>
+                        <p>Deployment, quality assurance, and post-launch support. Deliverables: live site, training,
+                            and optional monthly design partnership.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offers -->
+        <section>
+            <div class="container">
+                <div class="section-header reveal-item">
+                    <h2>Studio Engagements</h2>
+                    <p>Choose the engagement model that matches your needs and timeline.</p>
+                </div>
+                <div class="offers-grid">
+                    <div class="offer-card reveal-item">
+                        <h3>Brand System + Packaging</h3>
+                        <p class="offer-subtitle">Complete visual identity and packaging design</p>
+                        <p class="offer-meta">Best for: New brands or rebrands</p>
+                        <p class="offer-timeline">Timeline: 6–8 weeks</p>
+                        <ul class="offer-includes">
+                            <li>Brand strategy and positioning</li>
+                            <li>Logo and visual identity system</li>
+                            <li>Typography and color systems</li>
+                            <li>Packaging design and print-ready files</li>
+                            <li>Brand guidelines document</li>
+                        </ul>
+                        <a href="#contact" class="btn">Discuss Project</a>
+                    </div>
+                    <div class="offer-card featured reveal-item">
+                        <h3>Signature Store Design</h3>
+                        <p class="offer-subtitle">Custom Shopify experience from concept to launch</p>
+                        <p class="offer-meta">Best for: Established brands seeking premium presence</p>
+                        <p class="offer-timeline">Timeline: 8–12 weeks</p>
+                        <ul class="offer-includes">
+                            <li>Strategic discovery and competitive audit</li>
+                            <li>Custom Shopify theme development</li>
+                            <li>Content architecture and UX design</li>
+                            <li>Art direction for photography</li>
+                            <li>Speed optimization and accessibility</li>
+                            <li>Post-launch support and training</li>
+                        </ul>
+                        <a href="#contact" class="btn">Discuss Project</a>
+                    </div>
+                    <div class="offer-card reveal-item">
+                        <h3>Studio Partnership</h3>
+                        <p class="offer-subtitle">Ongoing design and development support</p>
+                        <p class="offer-meta">Best for: Brands with evolving needs</p>
+                        <p class="offer-timeline">Timeline: Monthly retainer</p>
+                        <ul class="offer-includes">
+                            <li>Dedicated design and development hours</li>
+                            <li>Quarterly strategic reviews</li>
+                            <li>Content design and asset creation</li>
+                            <li>Theme updates and optimization</li>
+                            <li>Priority response and scheduling</li>
+                        </ul>
+                        <a href="#contact" class="btn">Discuss Partnership</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header reveal-item">
+                    <h2>What Clients Say</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal-item">
+                        <p class="testimonial-quote">"Ascent Mgnt completely elevated our brand. Every detail was
+                            considered — from the logo to the packaging to how products are presented online. Our site
+                            finally matches the quality of our products."</p>
+                        <p class="testimonial-author">Sarah Mitchell</p>
+                        <p class="testimonial-role">Founder, Clean Beauty Co</p>
+                    </div>
+                    <div class="testimonial-card reveal-item">
+                        <p class="testimonial-quote">"They brought a level of craft and attention to detail we hadn't
+                            seen from other agencies. The new site feels premium without being overdone. Our customers
+                            notice the difference."</p>
+                        <p class="testimonial-author">James Park</p>
+                        <p class="testimonial-role">Creative Director, Modern Apparel</p>
+                    </div>
+                    <div class="testimonial-card reveal-item">
+                        <p class="testimonial-quote">"Working with the studio was seamless. They understood our vision
+                            immediately and delivered a brand system and Shopify site that exceeded expectations. True
+                            creative partners."</p>
+                        <p class="testimonial-author">Alex Rivera</p>
+                        <p class="testimonial-role">Co-Founder, HomeGoods Direct</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section>
+            <div class="container">
+                <div class="section-header reveal-item">
+                    <h2>Common Questions</h2>
+                </div>
+                <div class="faq-grid">
+                    <details>
+                        <summary>Do you handle branding and packaging as well as Shopify?</summary>
+                        <div class="faq-content">
+                            <p>Yes. We offer full brand identity systems, packaging design, and Shopify development.
+                                Most of our clients work with us across multiple touchpoints to ensure visual coherence
+                                from product to web to print.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Can you work with our existing theme or do we need a rebuild?</summary>
+                        <div class="faq-content">
+                            <p>We can assess your current theme and determine the best path forward. Sometimes
+                                customization is sufficient; other times a custom build is necessary to achieve the
+                                desired quality. We're transparent about what's required.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>How do you keep the store fast and accessible with custom design?</summary>
+                        <div class="faq-content">
+                            <p>Performance and accessibility are built in from the start. We write clean, semantic code,
+                                optimize assets, and follow best practices for Core Web Vitals and WCAG standards.
+                                Quality design and fast load times aren't mutually exclusive.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>What do you need from us to get started?</summary>
+                        <div class="faq-content">
+                            <p>An introductory call, access to current brand assets (if they exist), product
+                                information, and clarity on goals and timeline. We handle the rest — from strategy
+                                through execution.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Do you collaborate with in-house teams?</summary>
+                        <div class="faq-content">
+                            <p>Absolutely. We work with in-house designers, developers, and marketers regularly. Clear
+                                communication and mutual respect for craft make these collaborations successful.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>What's your typical project timeline?</summary>
+                        <div class="faq-content">
+                            <p>Brand projects take 6–8 weeks. Full Shopify builds take 8–12 weeks. Timelines depend on
+                                scope and revision rounds, but we're transparent about schedule from the start.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Do you work with brands outside the US?</summary>
+                        <div class="faq-content">
+                            <p>Yes. We work with clients globally. Most communication is asynchronous, and we're
+                                experienced coordinating across time zones.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta" id="contact">
+            <div class="container">
+                <h2>Let's Create Something Exceptional</h2>
+                <p>Review our selected work or schedule an introductory call to discuss your project.</p>
+                <p class="capacity-note">We respond to inquiries within 24 hours</p>
+                <div class="cta-group" style="justify-content: center;">
+                    <a href="#work" class="btn">View Selected Work</a>
+                    <a href="#contact" class="btn btn-secondary">Request Studio Intro Call</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand reveal-item">
+                    <h3>Ascent Mgnt</h3>
+                    <p>Premium Shopify design studio. We create brand-led commerce experiences through identity systems,
+                        packaging design, and custom Shopify development.</p>
+                    <div class="footer-form">
+                        <h4>Studio Inquiries</h4>
+                        <input type="email" placeholder="your@email.com" aria-label="Email address">
+                        <button class="btn" style="width: 100%;">Send Inquiry</button>
+                    </div>
+                </div>
+                <div class="footer-nav reveal-item">
+                    <h4>Capabilities</h4>
+                    <ul>
+                        <li><a href="#services">Shopify Design</a></li>
+                        <li><a href="#services">Brand Identity</a></li>
+                        <li><a href="#services">Packaging Design</a></li>
+                        <li><a href="#services">Theme Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav reveal-item">
+                    <h4>Studio</h4>
+                    <ul>
+                        <li><a href="#work">Selected Work</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ascent Mgnt. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky header scroll state
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll >= 12) {
+                header.classList.add('is-scrolled');
+            } else {
+                header.classList.remove('is-scrolled');
+            }
+        }, { passive: true });
+
+        // Scroll reveal animations with IntersectionObserver
+        const revealItems = document.querySelectorAll('.reveal-item');
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const container = entry.target.parentElement;
+                    const siblings = Array.from(container.querySelectorAll('.reveal-item'));
+                    const itemIndex = siblings.indexOf(entry.target);
+
+                    // Stagger delay: 75ms per item, max 240ms
+                    const delay = Math.min(itemIndex * 75, 240);
+
+                    setTimeout(() => {
+                        entry.target.classList.add('revealed');
+                    }, delay);
+
+                    // Reveal once - unobserve after revealing
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        revealItems.forEach(item => {
+            revealObserver.observe(item);
+        });
+
+        // FAQ smooth animation handler
+        (function () {
+            const detailsElements = document.querySelectorAll('details');
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            detailsElements.forEach(details => {
+                const summary = details.querySelector('summary');
+                const content = details.querySelector('.faq-content');
+
+                let isAnimating = false;
+
+                summary.addEventListener('click', (e) => {
+                    // If reduced motion, let browser handle it natively
+                    if (prefersReducedMotion) return;
+
+                    // Prevent animation conflicts
+                    if (isAnimating) {
+                        e.preventDefault();
+                        return;
+                    }
+
+                    e.preventDefault();
+                    isAnimating = true;
+
+                    const isOpen = details.hasAttribute('open');
+
+                    if (isOpen) {
+                        // Closing
+                        const startHeight = details.offsetHeight;
+
+                        // Remove open attribute
+                        details.removeAttribute('open');
+
+                        const endHeight = details.offsetHeight;
+
+                        // Animate from current height to collapsed height
+                        details.style.height = startHeight + 'px';
+                        details.setAttribute('open', '');
+
+                        requestAnimationFrame(() => {
+                            details.style.overflow = 'hidden';
+                            details.style.height = startHeight + 'px';
+                            details.style.transition = 'height 300ms cubic-bezier(0.2, 0.8, 0.2, 1)';
+                            content.style.transition = 'opacity 300ms cubic-bezier(0.2, 0.8, 0.2, 1)';
+                            content.style.opacity = '0';
+
+                            requestAnimationFrame(() => {
+                                details.style.height = endHeight + 'px';
+                            });
+                        });
+
+                        setTimeout(() => {
+                            details.removeAttribute('open');
+                            details.style.height = '';
+                            details.style.overflow = '';
+                            details.style.transition = '';
+                            content.style.transition = '';
+                            content.style.opacity = '';
+                            isAnimating = false;
+                        }, 300);
+
+                    } else {
+                        // Opening
+                        const startHeight = details.offsetHeight;
+
+                        details.setAttribute('open', '');
+
+                        const endHeight = details.offsetHeight;
+
+                        // Animate from collapsed to expanded
+                        details.style.height = startHeight + 'px';
+                        details.style.overflow = 'hidden';
+
+                        requestAnimationFrame(() => {
+                            details.style.transition = 'height 300ms cubic-bezier(0.2, 0.8, 0.2, 1)';
+                            content.style.transition = 'opacity 300ms cubic-bezier(0.2, 0.8, 0.2, 1)';
+                            content.style.opacity = '0';
+
+                            requestAnimationFrame(() => {
+                                details.style.height = endHeight + 'px';
+                                content.style.opacity = '1';
+                            });
+                        });
+
+                        setTimeout(() => {
+                            details.style.height = '';
+                            details.style.overflow = '';
+                            details.style.transition = '';
+                            content.style.transition = '';
+                            isAnimating = false;
+                        }, 300);
+                    }
+                });
+
+                // Support keyboard interaction (Enter/Space)
+                summary.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        summary.click();
+                    }
+                });
+            });
+        })();
+
+        // Interactive Bubble Background
+        (function () {
+            const canvas = document.getElementById('bubbleCanvas');
+            const ctx = canvas.getContext('2d');
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            let width, height;
+            let bubbles = [];
+            let mouseX = 0;
+            let mouseY = 0;
+            let animationFrameId;
+
+            // Resize canvas to match container
+            function resizeCanvas() {
+                const heroSection = canvas.parentElement;
+                width = heroSection.offsetWidth;
+                height = heroSection.offsetHeight;
+                canvas.width = width;
+                canvas.height = height;
+            }
+
+            // Bubble class
+            class Bubble {
+                constructor() {
+                    this.reset();
+                }
+
+                reset() {
+                    this.x = Math.random() * width;
+                    this.y = height + Math.random() * 100;
+                    this.radius = Math.random() * 3 + 1; // 1-4px radius
+                    this.speedY = Math.random() * 0.5 + 0.3; // Slow upward drift
+                    this.speedX = (Math.random() - 0.5) * 0.3;
+                    this.opacity = Math.random() * 0.15 + 0.05; // 0.05-0.2 opacity
+                    this.wobble = Math.random() * 0.02;
+                    this.wobbleSpeed = Math.random() * 0.02 + 0.01;
+                    this.wobbleOffset = Math.random() * Math.PI * 2;
+                }
+
+                update(deltaTime) {
+                    // Upward drift
+                    this.y -= this.speedY * deltaTime * 0.06;
+
+                    // Horizontal wobble
+                    this.wobbleOffset += this.wobbleSpeed * deltaTime * 0.001;
+                    this.x += Math.sin(this.wobbleOffset) * this.wobble * deltaTime * 0.06;
+
+                    // Mouse interaction (gentle repel)
+                    const dx = this.x - mouseX;
+                    const dy = this.y - mouseY;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    const minDistance = 120;
+
+                    if (distance < minDistance) {
+                        const force = (minDistance - distance) / minDistance;
+                        this.x += (dx / distance) * force * 0.5;
+                        this.y += (dy / distance) * force * 0.5;
+                    }
+
+                    // Reset if bubble goes off screen
+                    if (this.y < -20 || this.x < -20 || this.x > width + 20) {
+                        this.reset();
+                    }
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(233, 208, 144, ${this.opacity})`;
+                    ctx.fill();
+                }
+            }
+
+            // Initialize bubbles
+            function initBubbles() {
+                bubbles = [];
+                const bubbleCount = Math.floor((width * height) / 8000); // Density based on area
+                for (let i = 0; i < bubbleCount; i++) {
+                    bubbles.push(new Bubble());
+                }
+            }
+
+            // Animation loop
+            let lastTime = 0;
+            function animate(currentTime) {
+                const deltaTime = currentTime - lastTime;
+                lastTime = currentTime;
+
+                ctx.clearRect(0, 0, width, height);
+
+                bubbles.forEach(bubble => {
+                    if (!prefersReducedMotion) {
+                        bubble.update(deltaTime);
+                    }
+                    bubble.draw();
+                });
+
+                animationFrameId = requestAnimationFrame(animate);
+            }
+
+            // Mouse tracking
+            canvas.addEventListener('mousemove', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                mouseX = e.clientX - rect.left;
+                mouseY = e.clientY - rect.top;
+            });
+
+            // Initialize
+            resizeCanvas();
+            initBubbles();
+            animate(0);
+
+            // Handle resize
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    resizeCanvas();
+                    initBubbles();
+                }, 250);
+            });
+
+            // Cleanup on page unload
+            window.addEventListener('beforeunload', () => {
+                if (animationFrameId) {
+                    cancelAnimationFrame(animationFrameId);
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>
